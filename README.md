@@ -1,4 +1,8 @@
-# Trabajo Práctico Parte 2 — Node.js + Express + MySQL
+<img src="assets/utn_logo.svg" width="150">
+<br/>
+<br/>
+
+# Trabajo Práctico Parte 2 — Node.js Express
 
 ## Objetivo
 
