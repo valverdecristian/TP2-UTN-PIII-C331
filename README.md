@@ -56,11 +56,11 @@ src/<br/>
 
 **Modelos**
 
-Necesitará construir las siguientes Modelos:
+Necesitará construir los siguientes Modelos:
 
 <br/>
 
-- Un modelo que represente una entidad principal de su temática, con al menos **Minimo 6 propiedades**
+- Un modelo que represente una entidad principal de su temática **Minimo 6 propiedades**
   <br/>
 
   > Deberá incluir lo siguiente:
@@ -115,11 +115,6 @@ Necesitará construir las siguientes Rutas y Controladores:
   > - Crear un autor
   > - Leer todos los autores
 
-<!-- #### 4.3. **Relación Autor-Modelo Personalizado (1:N)**
-
-- Al crear un registro en el modelo personalizado, asócielo a un autor existente mediante su `idAutor`.
-
- -->
 <br/>
 <br/>
 
