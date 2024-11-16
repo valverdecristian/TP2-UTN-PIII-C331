@@ -172,7 +172,7 @@ El resultado final deberia verse como: <br/>
 
 ## **Comentarios Finales**
 
-Un dicho común en el desarrollo backend es:
+Un dicho común en el desarrollo es:
 
 > "An API is just as good as its documentation"
 >
