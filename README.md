@@ -54,6 +54,12 @@ src/<br/>
 
 ## Detalles
 
+**Base de Datos**
+
+Se debe realizar la conexión con una base de datos **MySQL**.
+
+<br/>
+
 **Modelos**
 
 Necesitará construir los siguientes Modelos:
@@ -107,20 +113,22 @@ Necesitará construir las siguientes Rutas y Controladores:
 <br/>
 <br/>
 
-- Rutas para el Modelo Autor **Minimo 2 rutas**
+- Rutas para el Modelo Autor **Minimo 4 rutas**
   <br/>
 
   > Deberá incluir lo siguiente:
   >
   > - Crear un autor
   > - Leer todos los autores
+  > - Leer un autor por ID
+  > - Eliminar un autor por ID
 
 <br/>
 <br/>
 
 ## Opcionales
 
-**Query Params** (+4)
+**Query Params**
 
 Incluya las siguientes funcionalidades adicionales en las rutas de **"Leer todos los registros"** para el modelo personalizado:
 
@@ -139,10 +147,12 @@ Incluya las siguientes funcionalidades adicionales en las rutas de **"Leer todos
 4. **Filtrado por `status`**
    - Permita filtrar los registros según el estado (`active`, `inactive`) utilizando un parámetro `status`.
 
+El resultado final deberia verse como: <br/>
+`GET /modeloPersonalizado?page=2&limit=5&sort=DESC&type=category1&status=active`
 <br/>
 <br/>
 
-**Relación Autor-Modelo Personalizado (1:N)** (+2)
+**Relación Autor-Modelo Personalizado (1:N)**
 
 1. Al crear un registro en el modelo personalizado, asócielo a un autor existente mediante su `idAutor`.
 
@@ -160,6 +170,19 @@ Incluya las siguientes funcionalidades adicionales en las rutas de **"Leer todos
 <br/>
 <br/>
 
+## **Comentarios Finales**
+
+Un dicho común en el desarrollo backend es:
+
+> "An API is just as good as its documentation"
+>
+> — Common saying in backend development
+
+Por este motivo, vamos a valorar mucho este aspecto. Siéntase libre de utilizar librerías como **Swagger** para generar su documentación.
+
+<br/>
+<br/>
+
 ## **Fecha de Entrega:**
 
-A definir
+27/11
