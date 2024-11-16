@@ -166,6 +166,7 @@ El resultado final deberia verse como: <br/>
   - Descripción breve de la API.
   - Instrucciones para correr el proyecto localmente.
   - Ejemplos de endpoints y cómo probarlos.
+- Archivos de ejemplos(seed) en formato json de cada modelo, para cargar la DDBB
 
 <br/>
 <br/>
