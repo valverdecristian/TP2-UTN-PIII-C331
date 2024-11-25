@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "nombre": "Todd",
+        "apellido": "Phillips",
+        "nacionalidad": "Estadounidense",
+        "biografia": "Todd Phillips es un director y guionista estadounidense, conocido por dirigir películas como 'Joker' y la trilogía de 'The Hangover'.",
+        "createdAt": "2024-11-25T16:34:36.000Z",
+        "updatedAt": "2024-11-25T16:34:36.000Z"
+    },
+    {
+        "id": 2,
+        "nombre": "Joaquim",
+        "apellido": "Dos Santos",
+        "nacionalidad": "Brasileño",
+        "biografia": "Joaquim Dos Santos es un director de animación brasileño, conocido por su trabajo en 'Spider-Man: Cruzando el Multiverso' y series animadas como 'Avatar: The Last Airbender'.",
+        "createdAt": "2024-11-25T16:35:09.000Z",
+        "updatedAt": "2024-11-25T16:35:09.000Z"
+    },
+    {
+        "id": 3,
+        "nombre": "Joseph",
+        "apellido": "Kosinski",
+        "nacionalidad": "Estadounidense",
+        "biografia": "Joseph Kosinski es un director de cine estadounidense, conocido por dirigir 'Top Gun: Maverick' y 'Tron: Legacy'.",
+        "createdAt": "2024-11-25T16:35:27.000Z",
+        "updatedAt": "2024-11-25T16:35:27.000Z"
+    },
+    {
+        "id": 4,
+        "nombre": "Baz",
+        "apellido": "Luhrmann",
+        "nacionalidad": "Australiano",
+        "biografia": "Baz Luhrmann es un director, escritor y productor australiano, conocido por películas como 'Elvis' y 'Moulin Rouge!'.",
+        "createdAt": "2024-11-25T16:35:41.000Z",
+        "updatedAt": "2024-11-25T16:35:41.000Z"
+    },
+    {
+        "id": 5,
+        "nombre": "Shawn",
+        "apellido": "Levy",
+        "nacionalidad": "Canadiense",
+        "biografia": "Shawn Levy es un director y productor canadiense, conocido por películas como 'Deadpool 3' y 'Free Guy'.",
+        "createdAt": "2024-11-25T16:35:55.000Z",
+        "updatedAt": "2024-11-25T16:35:55.000Z"
+    },
+    {
+        "id": 6,
+        "nombre": "Ridley",
+        "apellido": "Scott",
+        "nacionalidad": "Británico",
+        "biografia": "Ridley Scott es un director y productor británico, conocido por películas como 'Gladiator' y 'Blade Runner'.",
+        "createdAt": "2024-11-25T16:36:14.000Z",
+        "updatedAt": "2024-11-25T16:36:14.000Z"
+    },
+    {
+        "id": 7,
+        "nombre": "Matt",
+        "apellido": "Reeves",
+        "nacionalidad": "Estadounidense",
+        "biografia": "Matt Reeves es un director, productor y guionista estadounidense, conocido por dirigir 'The Batman' y 'Cloverfield'.",
+        "createdAt": "2024-11-25T16:36:27.000Z",
+        "updatedAt": "2024-11-25T16:36:27.000Z"
+    },
+    {
+        "id": 8,
+        "nombre": "Kenji",
+        "apellido": "Kamiyama",
+        "nacionalidad": "Japonés",
+        "biografia": "Kenji Kamiyama es un director de animación japonés, conocido por dirigir 'El Señor de los Anillos: La Guerra de los Rohirrim' y 'Ghost in the Shell: Stand Alone Complex'.",
+        "createdAt": "2024-11-25T16:36:43.000Z",
+        "updatedAt": "2024-11-25T16:36:43.000Z"
+    },
+    {
+        "id": 9,
+        "nombre": "John M.",
+        "apellido": "Chu",
+        "nacionalidad": "Estadounidense",
+        "biografia": "John M. Chu es un director y productor estadounidense, conocido por películas como 'Wicked: Parte 1' y 'Crazy Rich Asians'.",
+        "createdAt": "2024-11-25T16:36:56.000Z",
+        "updatedAt": "2024-11-25T16:36:56.000Z"
+    },
+    {
+        "id": 10,
+        "nombre": "Chris",
+        "apellido": "Sanders",
+        "nacionalidad": "Estadounidense",
+        "biografia": "Chris Sanders es un director y guionista estadounidense, conocido por su trabajo en películas de animación como 'Lilo & Stitch' y 'Cómo entrenar a tu dragón'.",
+        "createdAt": "2024-11-25T16:37:11.000Z",
+        "updatedAt": "2024-11-25T16:37:11.000Z"
+    },
+    {
+        "id": 11,
+        "nombre": "Tomas",
+        "apellido": "Sanchez",
+        "nacionalidad": "Desconocida",
+        "biografia": "Tomas Sanchez es un director conocido por su trabajo en la película 'Chocolate para tres'.",
+        "createdAt": "2024-11-25T16:37:32.000Z",
+        "updatedAt": "2024-11-25T16:37:32.000Z"
+    }
+]

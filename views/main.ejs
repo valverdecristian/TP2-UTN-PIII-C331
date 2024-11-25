@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+        <h1 class="text-center my-4"><%= nombre %></h1>
+
+        <div class="mb-4">
+            <h2 class="text-primary"><a href="/autores">Autores</a></h2>
+            <ul class="list-group">
+                <% autores.forEach(autor => { %>
+                    <li class="list-group-item"><%= autor.nombre %> <%= autor.apellido %></li>
+                <% }); %>
+            </ul>
+        </div>
+        
+        <div>
+            <h2 class="text-primary"><a href="/peliculas">Películas</a></h2>
+            <ul class="list-group">
+                <% peliculas.forEach(pelicula => { %>
+                    <li class="list-group-item"><strong><%= pelicula.nombre %></strong> - Genero: <%= pelicula.genero %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <%- include('partials/script') %>
+</body>
+</html>

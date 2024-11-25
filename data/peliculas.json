@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "nombre": "Joker",
+        "genero": "Drama",
+        "duracion": 122,
+        "director": 1,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:40:05.000Z",
+        "updatedAt": "2024-11-25T16:40:05.000Z"
+    },
+    {
+        "id": 2,
+        "nombre": "Spider-Man: Cruzando el Multiverso",
+        "genero": "Animacion",
+        "duracion": 127,
+        "director": 2,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:40:35.000Z",
+        "updatedAt": "2024-11-25T16:40:35.000Z"
+    },
+    {
+        "id": 3,
+        "nombre": "Top Gun: Maverick",
+        "genero": "Drama",
+        "duracion": 131,
+        "director": 3,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:41:12.000Z",
+        "updatedAt": "2024-11-25T16:41:12.000Z"
+    },
+    {
+        "id": 4,
+        "nombre": "Elvis",
+        "genero": "Biografia",
+        "duracion": 159,
+        "director": 4,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:41:36.000Z",
+        "updatedAt": "2024-11-25T16:41:36.000Z"
+    },
+    {
+        "id": 5,
+        "nombre": "Deadpool 3",
+        "genero": "Comedia",
+        "duracion": 125,
+        "director": 5,
+        "status": "active",
+        "createdAt": "2024-11-25T16:42:01.000Z",
+        "updatedAt": "2024-11-25T16:42:01.000Z"
+    },
+    {
+        "id": 6,
+        "nombre": "Gladiator 2",
+        "genero": "Accion",
+        "duracion": 123,
+        "director": 6,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:42:25.000Z",
+        "updatedAt": "2024-11-25T16:42:25.000Z"
+    },
+    {
+        "id": 7,
+        "nombre": "The Batman",
+        "genero": "Drama",
+        "duracion": 176,
+        "director": 7,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:42:42.000Z",
+        "updatedAt": "2024-11-25T16:42:42.000Z"
+    },
+    {
+        "id": 8,
+        "nombre": "El Señor de los Anillos: La Guerra de los Rohirrim",
+        "genero": "Animacion",
+        "duracion": 120,
+        "director": 8,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:43:06.000Z",
+        "updatedAt": "2024-11-25T16:43:06.000Z"
+    },
+    {
+        "id": 9,
+        "nombre": "Wicked",
+        "genero": "Musical",
+        "duracion": 160,
+        "director": 9,
+        "status": "active",
+        "createdAt": "2024-11-25T16:43:23.000Z",
+        "updatedAt": "2024-11-25T16:43:23.000Z"
+    },
+    {
+        "id": 10,
+        "nombre": "Robot Salvaje",
+        "genero": "Animacion",
+        "duracion": 102,
+        "director": 10,
+        "status": "active",
+        "createdAt": "2024-11-25T16:43:41.000Z",
+        "updatedAt": "2024-11-25T16:43:41.000Z"
+    },
+    {
+        "id": 11,
+        "nombre": "Chocolate para tres",
+        "genero": "Drama",
+        "duracion": 85,
+        "director": 11,
+        "status": "active",
+        "createdAt": "2024-11-25T16:43:59.000Z",
+        "updatedAt": "2024-11-25T16:43:59.000Z"
+    },
+    {
+        "id": 12,
+        "nombre": "The Hangover",
+        "genero": "Comedia",
+        "duracion": 100,
+        "director": 1,
+        "status": "inactive",
+        "createdAt": "2024-11-25T16:48:26.000Z",
+        "updatedAt": "2024-11-25T16:48:26.000Z"
+    },
+    {
+        "id": 13,
+        "nombre": "Crazy Rich Asians",
+        "genero": "Comedia, Romance",
+        "duracion": 120,
+        "director": 9,
+        "status": "active",
+        "createdAt": "2024-11-25T16:51:09.000Z",
+        "updatedAt": "2024-11-25T16:51:09.000Z"
+    },
+    {
+        "id": 14,
+        "nombre": "Tron: Legacy",
+        "genero": "Aventura",
+        "duracion": 125,
+        "director": 3,
+        "status": "active",
+        "createdAt": "2024-11-25T16:52:10.000Z",
+        "updatedAt": "2024-11-25T16:52:10.000Z"
+    }
+]
