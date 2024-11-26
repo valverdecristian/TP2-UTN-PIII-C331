@@ -2,188 +2,120 @@
 <br/>
 <br/>
 
-# Trabajo Práctico Parte 2 — Node.js Express
+# Proyecto Directores y Peliculas
 
-## Objetivo
+## Descripción
 
-El objetivo de este trabajo práctico es que los estudiantes desarrollen una API utilizando Node.js, Express, MySQL y Sequelize, demostrando sus conocimientos en el manejo del backend, estructura de proyectos y operaciones CRUD.
+Este proyecto es una aplicación web para gestionar información sobre directores y películas. Utiliza Node.js, Express y Sequelize para interactuar con una base de datos MySQL. El front-end está estilizado con Bootstrap.
 
-Se valorará la organización del código, el uso de buenas prácticas y la implementación de funcionalidades adicionales especificadas.
-<br/>
-<br/>
+## Instalación
 
-## Requisitos
+Para instalar este proyecto, sigue estos pasos:
 
-### **Stack Tecnológico Obligatorio**
+1. **Clonar el repositorio:**
 
-- Node.js
-- Express.js
-- MySQL
-- Sequelize ORM
+   ```bash
+   git clone https://github.com/valverdecristian/TP2-UTN-PIII-C331
+   cd TP2-UTN-PIII-C331
 
-**Opcional:** Puede incluir otras herramientas y librerías (como Dotenv, Postman para probar la API, etc.).
-<br/>
-<br/>
+2. **Instalar dependencias:**
 
-## Desarrollo del trabajo práctico
+   ```bash
+   npm install
 
-- Se deberá clonar o "forkear" este repositorio para poder modificarlo y completarlo con la resolución del proyecto.
-- Una vez que su código esté listo, suba el código a un repositorio público propio y envíenos el enlace a dicho repositorio para que lo revisemos.
-  <br/>
-  <br/>
+3. **Configurar la base de datos:**
 
-## Trabajo Práctico
+   En el archivo db.sql se encuentra los script que crea las tablas necesarias
 
-**Crear una API temática libre**
+4. **Iniciar el servidor:**
+   ```bash
+   nodemon /app.js
 
-Elija un tema para su API.
-Ejemplo: una biblioteca digital, gestión de películas, catálogo de productos, etc.
+**Entrada del proyecto:**
 
-<br/>
+El punto de entrada del proyecto es el archivo `app.js`. Aqui se configuran las dependencias, se define el puerto del servidor y se configuran las rutas.
 
-**Estructura de Carpetas**
+**Estructura del proyecto:**
 
-Organice el proyecto respetando esta estructura básica:
+/views
+    /partials
+        head.ejs
+        navbar.ejs
+        script.ejs
+    main.ejs
+/controllers
+    mainControllers.js
+    autorController.js
+    principalController.js
+/models
+    autor.js
+    principal.js
+/routes
+    mainRouter.js
+    autorRouter.js
+    principalRouter.js
+/data
+    db.js
+    autores.json
+    peliculas.json
+app.js
+db.sql
 
-src/<br/>
-├── controllers/<br/>
-├── models/<br/>
-├── routes/<br/>
-├── data/<br/>
-└── app.js<br/>
+**Controladores:**
+`controllers/mainControllers.js` : Este archivo contiene el controlador principal que maneja la lógica para renderizar la vista principal de la aplicacion. Utiliza Sequelize para interactuar con la base de datos y obtener los datos de los autores y peliculas en tiempo real.
 
-## Detalles
+Descripción de la Funcion `index`:
+Esta funcion es el punto de entrada para la ruta principal ('/'). Es una función asincronica que realiza consultas a la base de datos para obtener todos los registros de autores y peliculas. Luego renderiza la vista `main.ejs` con los datos obtenidos.
+Detalles:
+* Consultas a la base de datos: Utiliza `await autorModel.findAll()` y `await principalModel.findAll()` para obtener todos los registros de las tablas `autores` y `principales`
+* Renderizado de la vista: Utiliza `res.render` para renderizar la vista `main.ejs` y pasar los datos de autores y peliculas a la vista.
+* Manejo de errores: Captura y registra cualquier error que ocurra durante las consultas a la base de datos, devolviendo una respuesta de error al cliente si es necesario.
 
-**Base de Datos**
+`controllers/autorController.js` : Controla las operaciones relacionadas con los directores, como creación, lectura, actualización y eliminación.
 
-Se debe realizar la conexión con una base de datos **MySQL**.
+Funciones:
+traerAutores: Obtiene todos los directores.
+traerUnAutor: Obtiene un director específico por ID y sus películas.
+crearAutor: Crea un nuevo director.
+actualizarAutor: Actualiza la información de un director existente.
+eliminarAutor: Elimina un director por ID.
 
-<br/>
+`controllers/principalController.js` : Controla las operaciones relacionadas con las películas, como creación, lectura, actualización y eliminación.
 
-**Modelos**
+Funciones:
+traerPrincipales: Obtiene todas las películas.
+traerUnPrincipal: Obtiene una película específica por ID.
+crearPrincipal: Crea una nueva película.
+actualizarPrincipal: Actualiza la información de una película existente.
+eliminarPrincipal: Elimina una película por ID.
 
-Necesitará construir los siguientes Modelos:
+**Rutas:**
 
-<br/>
+`routes/mainRouter.js` : Define la ruta principal para renderizar la vista principal.
+`routes/autorRouter.js` : Define las rutas para las operaciones CRUD relacionada con los directores.
+`routes/principalRouter.js` : Define las rutas para las operaciones CRUD relacionada con las peliculas.
 
-- Un modelo que represente una entidad principal de su temática **Minimo 6 propiedades**
-  <br/>
+**Vistas:**
 
-  > Deberá incluir lo siguiente:
-  >
-  > - `id` (autoincremental)
-  > - `createdAt` (fecha de creación, automática)
-  > - `updatedAt` (fecha de actualización, automática)
-  > - `type/categorie` (campo tipo o categoría, personalizado)
-  > - `status` (mínimo 2 opciones: `active`, `inactive`)
-  > - 1 propiedad adicional (de acuerdo al tema elegido).
+Utilizamos EJS como motor de vistas para renderizar los datos.
 
-<br/>
-<br/>
+`views/main.ejs` : Esta es la vista principal que muestra los directores y las peliculas.
+Incluye archivos parciales que contienen partes reutilizables de las vistas.
 
-- Un modelo para manejar autores **Minimo 5 propiedades**
-  <br/>
+**Modelos:**
 
-  > Deberá incluir lo siguiente:
-  >
-  > - `id` (autoincremental)
-  > - `createdAt` (fecha de creación, automática)
-  > - `updatedAt` (fecha de actualización, automática)
-  > - `name` (nombre del autor)
-  > - `surname` (apellido del autor)
+Los archivos en la carpeta `models` definen las estructuras de datos y las relaciones para interactuar con la base de datos mediante Sequelize.
 
-<br/>
-<br/>
+`models/autor.js` : Define el modelo de datos para los autores.
+`models/principal.js` : Define el modelo de datos para las peliculas (denominadas principales).
 
-**Rutas y Controladores**
+**Ejemplos de Endpoints y cómo probarlos:**
 
-Necesitará construir las siguientes Rutas y Controladores:
+- Endpoints de autores
+- Obtener todos los autores
+- > URL: /api/autores
+- > Método: GET
+- > Descripción: Obtener una lista de todos los autores (directores) en la base de datos.
 
-- Rutas para el Modelo Personalizado **Minimo 5 rutas**
-  <br/>
+![Get de autores](./img/get_autores.png)
 
-  > Deberá incluir lo siguiente:
-  >
-  > - Crear un registro
-  > - Actualizar por ID
-  > - Leer todos los registros
-  > - Leer un registro por ID
-  > - Eliminar un registro por ID
-
-<br/>
-<br/>
-
-- Rutas para el Modelo Autor **Minimo 4 rutas**
-  <br/>
-
-  > Deberá incluir lo siguiente:
-  >
-  > - Crear un autor
-  > - Leer todos los autores
-  > - Leer un autor por ID
-  > - Eliminar un autor por ID
-
-<br/>
-<br/>
-
-## Opcionales
-
-**Query Params**
-
-Incluya las siguientes funcionalidades adicionales en las rutas de **"Leer todos los registros"** para el modelo personalizado:
-
-1. **Paginado**
-
-   - Permita la paginación con parámetros `page` y `limit`.
-
-2. **Ordenado por Fecha de Creación**
-
-   - Soporte para ordenar por `createdAt` de forma ascendente (`ASC`) o descendente (`DESC`) mediante un parámetro `sort`.
-
-3. **Filtrado por `type/categorie`**
-
-   - Permita filtrar los registros según el valor del campo `type/categorie` utilizando un parámetro `type`.
-
-4. **Filtrado por `status`**
-   - Permita filtrar los registros según el estado (`active`, `inactive`) utilizando un parámetro `status`.
-
-El resultado final deberia verse como: <br/>
-`GET /modeloPersonalizado?page=2&limit=5&sort=DESC&type=category1&status=active`
-<br/>
-<br/>
-
-**Relación Autor-Modelo Personalizado (1:N)**
-
-1. Al crear un registro en el modelo personalizado, asócielo a un autor existente mediante su `idAutor`.
-
-<br/>
-<br/>
-
-## **Entrega**
-
-- Suba su código a un repositorio público en GitHub.
-- Incluya un archivo `README.md` con:
-  - Descripción breve de la API.
-  - Instrucciones para correr el proyecto localmente.
-  - Ejemplos de endpoints y cómo probarlos.
-- Archivos de ejemplos(seed) en formato json de cada modelo, para cargar la DDBB
-
-<br/>
-<br/>
-
-## **Comentarios Finales**
-
-Un dicho común en el desarrollo es:
-
-> "An API is just as good as its documentation"
->
-> — Common saying in backend development
-
-Por este motivo, vamos a valorar mucho este aspecto. Siéntase libre de utilizar librerías como **Swagger** para generar su documentación.
-
-<br/>
-<br/>
-
-## **Fecha de Entrega:**
-
-27/11
