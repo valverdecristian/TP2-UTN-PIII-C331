@@ -44,7 +44,7 @@ Para instalar este proyecto, sigue estos pasos:
    ```bash
    nodemon /app.js
 
-<br/><br/>
+<br/>
 
 **Entrada del proyecto:**
 
@@ -54,6 +54,7 @@ El punto de entrada del proyecto es el archivo `app.js`. Aqui se configuran las 
 
 **Estructura del proyecto:**
 
+```
 /views<br/>
     /partials<br/>
         head.ejs<br/>
@@ -77,65 +78,71 @@ El punto de entrada del proyecto es el archivo `app.js`. Aqui se configuran las 
     peliculas.json<br/>
 app.js<br/>
 db.sql<br/>
+```
 
 <br/>
 
-**Controladores:**
+**Controladores:** <br/>
 `controllers/mainControllers.js` : Este archivo contiene el controlador principal que maneja la lógica para renderizar la vista principal de la aplicacion. Utiliza Sequelize para interactuar con la base de datos y obtener los datos de los autores y peliculas en tiempo real.
 <br/>
 
-Descripción de la Funcion `index`:
+Descripción de la Funcion `index`: <br/>
+
 Esta funcion es el punto de entrada para la ruta principal ('/'). Es una función asincronica que realiza consultas a la base de datos para obtener todos los registros de autores y peliculas. Luego renderiza la vista `main.ejs` con los datos obtenidos.
 <br/>
 
 Detalles:
 <br/>
 
-* Consultas a la base de datos: Utiliza `await autorModel.findAll()` y `await principalModel.findAll()` para obtener todos los registros de las tablas `autores` y `principales`
+* Consultas a la base de datos: Utiliza `await autorModel.findAll()` y `await principalModel.findAll()` para obtener todos los registros de las tablas `autores` y `principales`.
 * Renderizado de la vista: Utiliza `res.render` para renderizar la vista `main.ejs` y pasar los datos de autores y peliculas a la vista.
 * Manejo de errores: Captura y registra cualquier error que ocurra durante las consultas a la base de datos, devolviendo una respuesta de error al cliente si es necesario.
 
 `controllers/autorController.js` : Controla las operaciones relacionadas con los directores, como creación, lectura, actualización y eliminación.
 
 <br/>
-Funciones:
-traerAutores: Obtiene todos los directores.
-traerUnAutor: Obtiene un director específico por ID y sus películas.
-crearAutor: Crea un nuevo director.
-actualizarAutor: Actualiza la información de un director existente.
-eliminarAutor: Elimina un director por ID.
+Funciones: <br/>
+traerAutores: Obtiene todos los directores. <br/>
+traerUnAutor: Obtiene un director específico por ID y sus películas. <br/>
+crearAutor: Crea un nuevo director. <br/>
+actualizarAutor: Actualiza la información de un director existente. <br/>
+eliminarAutor: Elimina un director por ID. <br/>
 <br/>
 
 `controllers/principalController.js` : Controla las operaciones relacionadas con las películas, como creación, lectura, actualización y eliminación.
 
 <br/>
-Funciones:
-traerPrincipales: Obtiene todas las películas.
-traerUnPrincipal: Obtiene una película específica por ID.
-crearPrincipal: Crea una nueva película.
-actualizarPrincipal: Actualiza la información de una película existente.
-eliminarPrincipal: Elimina una película por ID.
+Funciones: <br/>
+traerPrincipales: Obtiene todas las películas. <br/>
+traerUnPrincipal: Obtiene una película específica por ID. <br/>
+crearPrincipal: Crea una nueva película. <br/>
+actualizarPrincipal: Actualiza la información de una película existente. <br/>
+eliminarPrincipal: Elimina una película por ID. <br/>
 <br/>
 
 **Rutas:**
 
 `routes/mainRouter.js` : Define la ruta principal para renderizar la vista principal. <br/>
 `routes/autorRouter.js` : Define las rutas para las operaciones CRUD relacionada con los directores. <br/>
-`routes/principalRouter.js` : Define las rutas para las operaciones CRUD relacionada con las peliculas. <br/>
+`routes/principalRouter.js` : Define las rutas para las operaciones CRUD relacionada con las peliculas. <br/><br/>
 
 **Vistas:**
 
 Utilizamos EJS como motor de vistas para renderizar los datos. <br/>
 
 `views/main.ejs` : Esta es la vista principal que muestra los directores y las peliculas.
-Incluye archivos parciales que contienen partes reutilizables de las vistas. <br/>
+Incluye archivos parciales que contienen partes reutilizables de las vistas. <br/><br/>
 
 **Modelos:**
 
 Los archivos en la carpeta `models` definen las estructuras de datos y las relaciones para interactuar con la base de datos mediante Sequelize.
 
 `models/autor.js` : Define el modelo de datos para los autores. <br/>
-`models/principal.js` : Define el modelo de datos para las peliculas (denominadas principales).
+`models/principal.js` : Define el modelo de datos para las peliculas (denominadas principales). <br/><br/><br/>
+
+**VISTA PRINCIPAL:**
+![Vista](./img/vista.png)
+<br/><br/>
 
 **Ejemplos de Endpoints y cómo probarlos:**
 
@@ -148,7 +155,7 @@ Endpoints de autores <br/>
 <br/>
 
 ![Get de autores](./img/get_autores.png)
-<br/>
+<br/><br/>
 
 - Obtener un autor por ID:
 - > URL: /autores/:id
@@ -157,7 +164,7 @@ Endpoints de autores <br/>
 <br/>
 
 ![Get de autor por ID](./img/get_autor_id.png)
-<br/>
+<br/><br/>
 
 - Crear un nuevo autor:
 - > URL: /autores
@@ -167,7 +174,7 @@ Endpoints de autores <br/>
 <br/>
 
 ![Post de autor](./img/post_autor.png)
-<br/>
+<br/><br/>
 
 - Eliminar un nuevo autor:
 - > URL: /autores/:id
